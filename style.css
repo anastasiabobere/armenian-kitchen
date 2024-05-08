@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  font-family: "Oswald", sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+h1,
+h3,
+h4 {
+  text-transform: uppercase;
+  color: rgb(39, 40, 40);
+}
+a {
+  text-decoration: none;
+  color: rgb(39, 40, 40);
+}
+p {
+  color: rgb(39, 40, 40);
+}
+a:hover {
+  text-decoration: underline;
+}
+span {
+  text-decoration: underline;
+  color: rgb(39, 40, 40);
+}
+/* home code */
+#home {
+  background-image: url(images/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100vh;
+}
+#home p,
+#home span {
+  padding-top: 5rem;
+  color: azure;
+  font-size: 1.5rem;
+}
+#home h1 {
+  padding-top: 16rem;
+  color: azure;
+  font-size: 5rem;
+  animation: introLoad 1.5s ease-out;
+}
+#text {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+#text h1 {
+  font-size: 4rem;
+}
+#text p {
+  font-size: 1.2rem;
+}
+
+/* food on home pages */
+#food {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+#food a {
+  font-size: smaller;
+}
+
+#food .foods {
+  border: 1px solid rgb(39, 40, 40);
+  height: 10rem;
+  margin-top: 1rem;
+  padding: 3rem;
+}
+#food .foods h3 {
+  font-size: 2rem;
+}
+#food .foods p {
+  font-size: 1.5rem;
+}
+#food .foods a {
+  font-size: 1.2rem;
+}
+#food .foods a,
+#food .foods p,
+#food .foods h1 {
+  padding: 1.5rem;
+}
+.recipe {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+}
+.recipe a {
+  grid-area: a;
+  font-size: 2rem;
+  width: 100%;
+  margin-left: 1.2rem;
+}
+.recipe .h1 {
+  grid-area: h1;
+  font-size: 2rem;
+  background-color: rgb(39, 40, 40);
+  color: azure;
+  width: 67%;
+  height: 300px;
+  text-align: center;
+
+  font-size: 6rem;
+  animation: introLoad 1.5s ease-out;
+}
+.recipe .h1:hover {
+  text-decoration: underline;
+}
+.info {
+  padding: 1.4rem;
+}
+.recipe img {
+  grid-area: img;
+  height: 300px;
+  width: 33%;
+  animation: introLoad 1.5s ease-out;
+}
+.recipe h4 {
+  grid-area: h4;
+  font-size: 2.5rem;
+}
+
+.recipe ul {
+  grid-area: ul;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  padding-left: 2rem;
+}
+.recipe p {
+  grid-area: p;
+  font-size: 1.4rem;
+}
+.footer {
+  margin-top: 5rem;
+  background-color: rgb(39, 40, 40);
+  color: azure !important;
+  text-align: center;
+  height: 200px;
+}
+.footer h1 {
+  color: azure !important;
+}
+.footer h5 {
+  font-size: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .recipe .h1 {
+    width: 100%;
+    height: 150px;
+    font-size: 4rem;
+    padding-top: 6rem;
+  }
+  .recipe img {
+    width: 100%;
+    height: 400px;
+  }
+  #food .foods h3 {
+    font-size: 1.5rem;
+  }
+  #food .foods p {
+    font-size: 1em;
+  }
+  #food .foods a {
+    font-size: 0.8rem;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes introLoad {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.fade-in-up {
+  animation: fadeInUp 0.75s both;
+}
